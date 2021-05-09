@@ -8,7 +8,7 @@ import time
 import threading 
 
     
-bot = telebot.TeleBot(TOKEN, parse_mode=None) # Create a bot object
+bot = telebot.TeleBot(TOKEN) # Create a bot object
 
 #Parse a news
 resp = req.get('https://www.sportskeeda.com/esports/pubg')
