@@ -4,9 +4,8 @@ import schedule
 from bs4 import BeautifulSoup
 import requests as req
 from config import TOKEN
-from telebot import types
-from time import sleep
-from threading import Thread
+import time
+import threading 
 
     
 bot = telebot.TeleBot(TOKEN, parse_mode=None) # Create a bot object
@@ -46,8 +45,8 @@ def send_news():
 def run():
 	while True:
 		schedule.run_pending()
-		sleep(1)
+		time.sleep(1)
 
 schedule.every(10).minutes.do(send_news)		
-Thread(target=run).start() 
+threading.Thread(target=run).start() 
 bot.polling()
