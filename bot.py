@@ -49,4 +49,4 @@ def run():
 
 schedule.every(10).minutes.do(send_news)		
 threading.Thread(target=run).start() 
-bot.polling()
+bot.polling() #start
